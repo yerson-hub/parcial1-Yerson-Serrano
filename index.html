@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Yerson Serrano</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://afarkas.github.io/webshim/demos/js-webshim/minified/extras/modernizr-custom.js"></script>
+    <script src="http://afarkas.github.io/webshim/demos/js-webshim/minified/polyfiller.js"></script>
+    <script>
+        $.webshims.polyfill(); //para activar el webshims
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("form").submit(function() {
+                alert("Formulario enviado");
+                return false;
+            }); //esto es para que lo reconozca cualquier tipo de navegador el formulario
+        });
+    </script>
+</head>
+
+<body>
+    <section class="banner" id="sec">
+        <header>
+            <a href="index.html" class="logo">
+                <h5>Pinta tu mundo</h5><img src="imagenes/paleta-de-color.png" alt="" class="logos">
+
+            </a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+        <div class="content">
+            <h2>Hola UCA,<br>Yo soy <span>Yerson Serrano</span></h2>
+            <p>Este es mi portafolio de mi vida personal, ven y descubre mi mundo.</p>
+            <a href="conoceme.html"> <img src="imagenes/conoceme.png" alt="">Conóceme</a>
+
+        </div>
+        <div class="container">
+            <div class="row"><img src="imagenes/mi_foto.jpeg" alt="" class="img1"></div>
+        </div>
+        <ul class="sci">
+
+            <li>
+                <a href="#"><img src="imagenes/facebook.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="imagenes/telegram.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="imagenes/whatsapp (1).png" alt=""></a>
+            </li>
+        </ul>
+    </section>
+    <div id="navigation">
+        <section class="sec">
+            <form method="POST" class="formu">
+                <div class="formu-header2">
+                    <h2 class="formu-tit">Contáctame</h2>
+                </div>
+
+                <label for="Asunto" class="form-label">Asunto</label>
+                <input type="text" autofocus="" class="form-input" placeholder="Escribe tu Asunto" name="asunto" required="requiered" pattern="[a-zA-Z\s]{5,}" />
+                <span class="invalid">*El Asunto es requerido</span>
+
+
+
+
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-input" required="" placeholder="Escribe tu email" />
+                <span class="invalid">*El correo es requerido</span>
+
+                <label for="descripcion" class="form-label">Descripcion</label>
+                <textarea name="descripcion" class="form-input" cols="30" rows="10"></textarea>
+
+
+                <div>
+                    <p>
+
+                        <input type="submit" name="enviar" class="btn-submit" value="Enviar">
+                </div>
+    </div>
+    <script type="text/javascript">
+        function toggle() {
+            var sec = document.getElementById('sec');
+            var nav = document.getElementById('navigation');
+            sec.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
